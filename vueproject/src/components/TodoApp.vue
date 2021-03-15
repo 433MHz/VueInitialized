@@ -6,12 +6,12 @@
     <button v-on:click='addItem()'>Dodaj</button>
   </div>
 
-  <div 
+  <div class="item"
   v-for="item in items" 
   v-bind:key='item.id'
   v-bind:class='{completed: item.completed === true}'
   >
-    <h2 class="item">{{item.title}}</h2>
+    <h2>{{item.title}}</h2>
     <button 
     v-on:click='removeItem(item.id)'
     v-if="item.completed === false"
