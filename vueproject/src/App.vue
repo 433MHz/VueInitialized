@@ -1,30 +1,19 @@
 <template>
 <div>
-    <h1>{{title}}</h1>
-    <button v-on:click='showAlert()'> show alert</button>
+  <h1>Notatnik</h1>
+
+<TodoApp></TodoApp>
+
 </div>
 </template>
 
+
 <script>
+import TodoApp from './components/TodoApp.vue'
 
 export default {
-  data(){
-    return{
-      title: 'Hello vue.js'
-    }
-  },
-
-  methods:{
-    showAlert(){
-      alert('Method called')
-    }
+  components:{
+    TodoApp
   }
 }
 </script>
-
-<style>
-
-body{
-  text-align: center;
-}
-</style>
